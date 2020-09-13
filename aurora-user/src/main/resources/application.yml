@@ -1,0 +1,22 @@
+server:
+  port: 8183
+
+spring:
+  application:
+    name: user-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://192.168.99.100:5432/userDB
+    username: admin
+    password: admin
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8661/eureka
+    instance:
+      hostname: localhost
